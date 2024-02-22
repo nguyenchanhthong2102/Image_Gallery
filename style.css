@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+:root {
+  --primary-color: #c850c0;
+  --foreign-color: #ada9b1;
+}
+.search .bg-search {
+  width: 100%;
+  height: 45vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  background-repeat: no-repeat;
+  position: relative;
+}
+.search .content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  color: #fff;
+}
+.search .search-input {
+  margin: 45px 0;
+  height: 45px;
+  position: relative;
+}
+.search .search-input input {
+  width: 100%;
+  height: 100%;
+
+  font-size: 1.1rem;
+  padding-left: 55px;
+  border-radius: 5px;
+}
+.search-input i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--foreign-color);
+}
+.gallary {
+  margin-top: 50px;
+}
+.gallary .images {
+  columns: 5 340px;
+  gap: 15px;
+}
+.images .card {
+  list-style: none;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.images .card .details {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: bottom 0.1s ease;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+.images .card:hover .details {
+  bottom: 0;
+}
+.gallary .images img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.card .details button {
+  padding: 3px 8px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+input,
+button,
+i {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.gallary .load-more {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallary .load-more.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
